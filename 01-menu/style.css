@@ -1,0 +1,60 @@
+ul {
+  width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  position: relative;
+  height: 55px;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  display: inline-block;
+  padding: 10px 0;
+}
+li.selected {
+
+}
+li:hover.selected {
+
+}
+
+
+.bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100px;
+  background-color: red;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+li:nth-child(1):hover~.bar { left: 0 !important; }
+li:nth-child(2):hover~.bar { left: 100px !important; }
+li:nth-child(3):hover~.bar { left: 200px !important; }
+li:nth-child(4):hover~.bar { left: 300px !important; }
+li:nth-child(5):hover~.bar { left: 400px !important; }
+li:nth-child(6):hover~.bar { left: 500px !important; }
+li:nth-child(7):hover~.bar { left: 600px !important; }
+li:nth-child(8):hover~.bar { left: 700px !important; }
+li:nth-child(9):hover~.bar { left: 800px !important; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
