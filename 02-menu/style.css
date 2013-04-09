@@ -25,47 +25,48 @@ li a {
 }
 li:last-child {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  margin-left: 800px;
+  margin-right: 0;
   border-bottom: 5px solid red;
   z-index: 99;
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -moz-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  -ms-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
+  -webkit-transition: margin-right 0.3s;
+  -moz-transition: margin-right 0.3s;
+  -o-transition: margin-right 0.3s;
+  -ms-transition: margin-right 0.3s;
+  transition: margin-right 0.3s;
 }
 li:last-child a {
   position: absolute;
-  left: 0;
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -moz-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  -ms-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
+  right: 0;
+  -webkit-transition: margin-right 0.3s;
+  -moz-transition: margin-right 0.3s;
+  -o-transition: margin-right 0.3s;
+  -ms-transition: margin-right 0.3s;
+  transition: margin-right 0.3s;
 }
-ul li:nth-child(1):hover~li:last-child { margin-left: 0; }
-ul li:nth-child(1):hover~li:last-child a { margin-left: 800px; }
-ul li:nth-child(2):hover~li:last-child { margin-left: 100px; }
-ul li:nth-child(2):hover~li:last-child a { margin-left: 700px; }
-ul li:nth-child(3):hover~li:last-child { margin-left: 200px; }
-ul li:nth-child(3):hover~li:last-child a { margin-left: 600px; }
-ul li:nth-child(4):hover~li:last-child { margin-left: 300px; }
-ul li:nth-child(4):hover~li:last-child a { margin-left: 500px; }
-ul li:nth-child(5):hover~li:last-child { margin-left: 400px; }
-ul li:nth-child(5):hover~li:last-child a { margin-left: 400px; }
-ul li:nth-child(6):hover~li:last-child { margin-left: 500px; }
-ul li:nth-child(6):hover~li:last-child a { margin-left: 300px; }
-ul li:nth-child(7):hover~li:last-child { margin-left: 600px; }
-ul li:nth-child(7):hover~li:last-child a { margin-left: 200px; }
-ul li:nth-child(8):hover~li:last-child { margin-left: 700px; }
-ul li:nth-child(8):hover~li:last-child a { margin-left: 100px; }
-ul li:last-child:hover { margin-left: 800px !important; }
-ul li:last-child:hover a { margin-left: 0 !important; }
 
-li:nth-child(4).selected~li:last-child { margin-left: 300px; }
-li:nth-child(4).selected~li:last-child a { margin-left: 500px; }
+ul li:nth-child(1):hover~li:last-child { margin-right: 800px; }
+ul li:nth-child(1):hover~li:last-child a { margin-right: -800px; }
+ul li:nth-child(2):hover~li:last-child { margin-right: 700px; }
+ul li:nth-child(2):hover~li:last-child a { margin-right: -700px; }
+ul li:nth-child(3):hover~li:last-child { margin-right: 600px; }
+ul li:nth-child(3):hover~li:last-child a { margin-right: -600px; }
+ul li:nth-child(4):hover~li:last-child { margin-right: 500px; }
+ul li:nth-child(4):hover~li:last-child a { margin-right: -500px; }
+ul li:nth-child(5):hover~li:last-child { margin-right: 400px; }
+ul li:nth-child(5):hover~li:last-child a { margin-right: -400px; }
+ul li:nth-child(6):hover~li:last-child { margin-right: 300px; }
+ul li:nth-child(6):hover~li:last-child a { margin-right: -300px; }
+ul li:nth-child(7):hover~li:last-child { margin-right: 200px; }
+ul li:nth-child(7):hover~li:last-child a { margin-right: -200px; }
+ul li:nth-child(8):hover~li:last-child { margin-right: 100px; }
+ul li:nth-child(8):hover~li:last-child a { margin-right: -100px; }
+ul li:last-child:hover { margin-right: 0 !important; }
+ul li:last-child:hover a { margin-right: 0 !important; }
+
+li:nth-child(4).selected~li:last-child { margin-right: 500px; }
+li:nth-child(4).selected~li:last-child a { margin-right: -500px; }
 
 .clearfix:after {
   content: ".";
