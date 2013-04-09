@@ -30,20 +30,20 @@ li:last-child {
   margin-left: 800px;
   border-bottom: 5px solid red;
   z-index: 99;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  -ms-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
 }
 li:last-child a {
   position: absolute;
   left: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  -ms-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
 }
 ul li:nth-child(1):hover~li:last-child { margin-left: 0; }
 ul li:nth-child(1):hover~li:last-child a { margin-left: 800px; }
