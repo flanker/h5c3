@@ -1,0 +1,76 @@
+ul {
+  width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  position: relative;
+  height: 55px;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 100px;
+  height: 45px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  display: inline-block;
+  padding: 10px 0;
+}
+li:last-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 800px;
+  border-bottom: 5px solid red;
+  z-index: 99;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+li:last-child a {
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+ul li:nth-child(1):hover~li:last-child { margin-left: 0; }
+ul li:nth-child(1):hover~li:last-child a { margin-left: 800px; }
+ul li:nth-child(2):hover~li:last-child { margin-left: 100px; }
+ul li:nth-child(2):hover~li:last-child a { margin-left: 700px; }
+ul li:nth-child(3):hover~li:last-child { margin-left: 200px; }
+ul li:nth-child(3):hover~li:last-child a { margin-left: 600px; }
+ul li:nth-child(4):hover~li:last-child { margin-left: 300px; }
+ul li:nth-child(4):hover~li:last-child a { margin-left: 500px; }
+ul li:nth-child(5):hover~li:last-child { margin-left: 400px; }
+ul li:nth-child(5):hover~li:last-child a { margin-left: 400px; }
+ul li:nth-child(6):hover~li:last-child { margin-left: 500px; }
+ul li:nth-child(6):hover~li:last-child a { margin-left: 300px; }
+ul li:nth-child(7):hover~li:last-child { margin-left: 600px; }
+ul li:nth-child(7):hover~li:last-child a { margin-left: 200px; }
+ul li:nth-child(8):hover~li:last-child { margin-left: 700px; }
+ul li:nth-child(8):hover~li:last-child a { margin-left: 100px; }
+ul li:last-child:hover { margin-left: 800px !important; }
+ul li:last-child:hover a { margin-left: 0 !important; }
+
+li:nth-child(4).selected~li:last-child { margin-left: 300px; }
+li:nth-child(4).selected~li:last-child a { margin-left: 500px; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

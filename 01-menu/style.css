@@ -41,6 +41,16 @@ li:hover.selected {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+li:nth-child(1).selected~.bar { left: 0 }
+li:nth-child(2).selected~.bar { left: 100px; }
+li:nth-child(3).selected~.bar { left: 200px; }
+li:nth-child(4).selected~.bar { left: 300px; }
+li:nth-child(5).selected~.bar { left: 400px; }
+li:nth-child(6).selected~.bar { left: 500px; }
+li:nth-child(7).selected~.bar { left: 600px; }
+li:nth-child(8).selected~.bar { left: 700px; }
+li:nth-child(9).selected~.bar { left: 800px; }
+
 li:nth-child(1):hover~.bar { left: 0 !important; }
 li:nth-child(2):hover~.bar { left: 100px !important; }
 li:nth-child(3):hover~.bar { left: 200px !important; }
