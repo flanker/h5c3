@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #f06d06;
+  text-decoration: none;
+}
+.box {
+  padding: 2em;
+  margin: -1px 0 0 -1px;
+  width: 400px;
+  height: 600px;
+  display: block;
+  border: 1px solid black;
+  background: linear-gradient(
+     white, white 50%, #333 50%, #333
+  );
+  background-size: 100% 202%;
+  transition: all 0.2s ease;
+  animation: down-bump 0.4s ease;
+  -webkit-animation: down-bump 0.4s ease;
+}
+.box:hover {
+  background-position: 100% 100%;
+  animation: up-bump 0.4s ease;
+  -webkit-animation: up-bump 0.4s ease;
+}
+.box:hover h2 {
+  color: #48ad26;
+}
+.box:hover h2 span {
+  color: white;
+}
+.box:hover h3 {
+  color: #999;
+}
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@-webkit-keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
+}
+@-webkit-keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
+}
