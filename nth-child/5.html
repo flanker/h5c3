@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>nth-child 5</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+    $(function () {
+      $('.apple:nth-child(3)').css('color', 'red');
+      $('.apple').eq(3).css('color', 'blue');
+    });
+  </script>
+</head>
+<body>
+  <h1>jQuery eq()</h1>
+  <ul>
+    <li class="mango">mango 1</li>
+    <li class="mango">mango 2</li>
+    <li class="apple">apple 1</li>
+    <li class="apple">apple 2</li>
+    <li class="apple">apple 3</li>
+    <li class="apple">apple 4</li>
+    <li class="apple">apple 5</li>
+  </ul>
+  <h2>html:</h2>
+  <pre>
+  &lt;ul&gt;
+    &lt;li class="mango"&gt;mango 1&lt;/li&gt;
+    &lt;li class="mango"&gt;mango 2&lt;/li&gt;
+    &lt;li class="apple"&gt;apple 1&lt;/li&gt;
+    &lt;li class="apple"&gt;apple 2&lt;/li&gt;
+    &lt;li class="apple"&gt;apple 3&lt;/li&gt;
+    &lt;li class="apple"&gt;apple 4&lt;/li&gt;
+    &lt;li class="apple"&gt;apple 5&lt;/li&gt;
+  &lt;/ul&gt;
+  </pre>
+  <h2>javascript(using jQuery):</h2>
+  <pre>
+    $(function () {
+      $('.apple:nth-child(3)').css('color', 'red');
+      $('.apple').eq(3).css('color', 'blue');
+    });
+  </pre>
+</body>
+</html>
