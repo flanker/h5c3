@@ -1,0 +1,46 @@
+.page {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  margin: 100px auto;
+}
+
+.radar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  border-radius: 100%;
+  box-shadow: 0 0 50px 50px #000;
+}
+
+@-webkit-keyframes scan {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes scan {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.radar:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 56%;
+  width: 3px;
+  /*background-color: green;*/
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(green));
+  left: 50%;
+  top: -30px;
+  margin-left: -1px;
+
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+
+  -webkit-animation: scan 10s linear infinite;
+  animation: scan 10s linear infinite;
+}
