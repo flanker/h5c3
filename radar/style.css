@@ -12,27 +12,18 @@
   background-color: #000;
   border-radius: 100%;
   box-shadow: 0 0 50px 50px #000;
+  overflow: hidden;
 }
 
 @-webkit-keyframes scan {
-  0% { -webkit-transform: rotate(180deg); }
-  50% { -webkit-transform: rotate(360deg); }
-  100% { -webkit-transform: rotate(540deg); }
-}
-@keyframes scan {
-  0% { transform: rotate(180deg); }
-  50% { transform: rotate(360deg); }
-  100% { transform: rotate(540deg); }
+  0% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 @-webkit-keyframes scan-cover {
   0% { -webkit-transform: rotate(170deg); }
   50% { -webkit-transform: rotate(350deg); }
   100% { -webkit-transform: rotate(530deg); }
-}
-@keyframes scan-cover {
-  0% { transform: rotate(170deg); }
-  50% { transform: rotate(350deg); }
-  100% { transform: rotate(530deg); }
 }
 
 .radar:before {
@@ -41,12 +32,9 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: -webkit-gradient(linear, right bottom, left top, from(#000), to(green));
+  background-image: -webkit-radial-gradient(center center, circle closest-side, green, black);
   border-radius: 100%;
-  clip: rect(0, 500px, 500px, 250px);
 
-  -webkit-animation: scan 10s linear infinite;
-  animation: scan 10s linear infinite;
 }
 .radar:after {
   content: " ";
@@ -59,7 +47,79 @@
   background-color: black;
   border-radius: 100%;
   clip: rect(0, 510px, 510px, 255px);
-
+  z-index: 20;
+  -webkit-animation: scan 10s linear infinite;
+}
+.objects:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 102%;
+  width: 102%;
+  top: -5px;
+  left: -5px;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  clip: rect(0, 510px, 510px, 255px);
+  z-index: 20;
   -webkit-animation: scan-cover 10s linear infinite;
-  animation: scan-cover 10s linear infinite;
+}
+.object {
+  margin: 0;
+  padding: 0;
+  color: green;
+  list-style: none;
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 100%;
+  font-size: 13px;
+  line-height: 13px;
+  text-indent: 8px;
+  font-family: sans-serif;
+  z-index: 10;
+}
+.html {
+  left: 236px;
+  top: 124px;
+}
+.css {
+  left: 358px;
+  top: 287px;
+}
+.javascript {
+  left: 400px;
+  top: 387px;
+}
+.ruby {
+  left: 201px;
+  top: 340px;
+}
+.java {
+  left: 182px;
+  top: 101px;
+}
+.mysql {
+  left: 102px;
+  top: 351px;
+}
+.backbone {
+  left: 433px;
+  top: 109px;
+}
+.rails {
+  left: 248px;
+  top: 187px;
+}
+.ec2 {
+  left: 301px;
+  top: 186px;
+}
+.cucumber {
+  left: 220px;
+  top: 321px;
 }
