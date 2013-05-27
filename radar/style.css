@@ -15,32 +15,51 @@
 }
 
 @-webkit-keyframes scan {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% { -webkit-transform: rotate(180deg); }
+  50% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(540deg); }
 }
 @keyframes scan {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(540deg); }
+}
+@-webkit-keyframes scan-cover {
+  0% { -webkit-transform: rotate(170deg); }
+  50% { -webkit-transform: rotate(350deg); }
+  100% { -webkit-transform: rotate(530deg); }
+}
+@keyframes scan-cover {
+  0% { transform: rotate(170deg); }
+  50% { transform: rotate(350deg); }
+  100% { transform: rotate(530deg); }
 }
 
+.radar:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, right bottom, left top, from(#000), to(green));
+  border-radius: 100%;
+  clip: rect(0, 500px, 500px, 250px);
+
+  -webkit-animation: scan 10s linear infinite;
+  animation: scan 10s linear infinite;
+}
 .radar:after {
   content: " ";
   display: block;
   position: absolute;
-  height: 56%;
-  width: 3px;
-  /*background-color: green;*/
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(green));
-  left: 50%;
-  top: -30px;
-  margin-left: -1px;
+  height: 102%;
+  width: 102%;
+  top: -5px;
+  left: -5px;
+  background-color: black;
+  border-radius: 100%;
+  clip: rect(0, 510px, 510px, 255px);
 
-  -webkit-transform-origin: 0 100%;
-  -moz-transform-origin: 0 100%;
-  -o-transform-origin: 0 100%;
-  -ms-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-
-  -webkit-animation: scan 10s linear infinite;
-  animation: scan 10s linear infinite;
+  -webkit-animation: scan-cover 10s linear infinite;
+  animation: scan-cover 10s linear infinite;
 }
