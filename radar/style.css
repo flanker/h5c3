@@ -223,7 +223,10 @@ ul, li {
   width: 100%;
   height: 100%;
 }
-.panel:before1 {
+.panel .more {
+  display: none;
+}
+.panel:before {
   content: " ";
   position: absolute;
   display: block;
@@ -233,7 +236,7 @@ ul, li {
   left: 0;
   top: 50%;
 }
-.panel:after1 {
+.panel:after {
   content: " ";
   position: absolute;
   display: block;
@@ -245,49 +248,65 @@ ul, li {
 }
 .panel ul:before,
 .panel ul:after,
-.panel ul li:before,
-.panel ul li:after {
-  /*content: " ";*/
-  height: 20%;
-  width: 20%;
+.panel ul li:nth-child(1):before,
+.panel ul li:nth-child(1):after,
+.panel ul li:nth-child(2):before,
+.panel ul li:nth-child(2):after,
+.panel ul li:nth-child(3):before,
+.panel ul li:nth-child(3):after {
+  content: " ";
   display: block;
   position: absolute;
   box-sizing: border-box;
-  border: 1px solid green;
+  border: 1px double green;
   border-radius: 100%;
   left: 50%;
   top: 50%;
-  margin-left: -10%;
-  margin-top: -10%;
+  -webkit-animation: scan 10s linear infinite;
 }
-.panel ul:before {
+.panel ul li:nth-child(2):before,
+.panel ul li:nth-child(2):after,
+.panel ul li:nth-child(3):before,
+.panel ul li:nth-child(3):after {
+  -webkit-animation: scan-cover 10s linear infinite;
+}
+.panel ul:before,
+.panel ul li:nth-child(2):before {
   height: 20%;
   width: 20%;
   margin-left: -10%;
   margin-top: -10%;
   border-color: #005500;
+  clip: rect(0, 500px, 500px, 50px);
 }
-.panel ul:after {
+.panel ul:after,
+.panel ul li:nth-child(2):after {
   height: 40%;
   width: 40%;
   margin-left: -20%;
   margin-top: -20%;
   border-color: #004400;
+  clip: rect(0, 500px, 500px, 100px);
 }
-.panel ul li:nth-child(1):before {
+.panel ul li:nth-child(1):before,
+.panel ul li:nth-child(3):before {
   height: 60%;
   width: 60%;
   margin-left: -30%;
   margin-top: -30%;
   border-color: #003300;
+  clip: rect(0, 500px, 500px, 150px);
 }
-.panel ul li:nth-child(1):after {
+.panel ul li:nth-child(1):after,
+.panel ul li:nth-child(3):after {
   height: 80%;
   width: 80%;
   margin-left: -40%;
   margin-top: -40%;
   border-color: #002200;
+  clip: rect(0, 500px, 500px, 200px);
 }
+
 .panel a {
     font-family: "FontAwesome";
     color: rgb(37,37,37);
