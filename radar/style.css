@@ -43,9 +43,9 @@ ul, li {
   100% { -webkit-transform: rotate(360deg); }
 }
 @-webkit-keyframes scan-cover {
-  0% { -webkit-transform: rotate(150deg); }
-  50% { -webkit-transform: rotate(330deg); }
-  100% { -webkit-transform: rotate(510deg); }
+  0% { -webkit-transform: rotate(100deg); }
+  50% { -webkit-transform: rotate(280deg); }
+  100% { -webkit-transform: rotate(460deg); }
 }
 .radar:before {
   content: " ";
@@ -95,40 +95,107 @@ ul, li {
   color: green;
   display: block;
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: green;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
   font-size: 13px;
+  box-sizing: border-box;
   line-height: 13px;
   text-indent: 8px;
   font-family: sans-serif;
   text-shadow: 1px 1px 1px #030;
   z-index: 10;
+  left: 0;
+  top: 0;
 }
+.object:nth-child(1):before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: -webkit-radial-gradient(circle, #006600, #000);
+  left: 0;
+  top: 50%;
+  z-index: 5;
+}
+.object:nth-child(1):after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: -webkit-radial-gradient(circle, #006600, #000);
+  left: 50%;
+  top: 0;
+  z-index: 5;
+}
+.object:nth-child(2):before,
+.object:nth-child(3):before,
+.object:nth-child(4):before,
+.object:nth-child(5):before {
+  content: " ";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid green;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+}
+.object:nth-child(2):before {
+  height: 20%;
+  width: 20%;
+  margin-left: -10%;
+  margin-top: -10%;
+  border-color: #005500;
+}
+.object:nth-child(3):before {
+  height: 40%;
+  width: 40%;
+  margin-left: -20%;
+  margin-top: -20%;
+  border-color: #004400;
+}
+.object:nth-child(4):before {
+  height: 60%;
+  width: 60%;
+  margin-left: -30%;
+  margin-top: -30%;
+  border-color: #003300;
+}
+.object:nth-child(5):before {
+  height: 80%;
+  width: 80%;
+  margin-left: -40%;
+  margin-top: -40%;
+  border-color: #002200;
+}
+
 .html {
-  left: 236px;
-  top: 124px;
+  padding-left: 236px;
+  padding-top: 124px;
 }
 .css {
-  left: 358px;
-  top: 287px;
+  padding-left: 358px;
+  padding-top: 287px;
 }
 .javascript {
-  left: 400px;
-  top: 387px;
+  padding-left: 400px;
+  padding-top: 387px;
 }
 .ruby {
-  left: 201px;
-  top: 340px;
+  padding-left: 201px;
+  padding-top: 340px;
 }
 .java {
-  left: 182px;
-  top: 101px;
+  padding-left: 182px;
+  padding-top: 101px;
 }
 .mysql {
-  left: 102px;
-  top: 351px;
+  padding-left: 102px;
+  padding-top: 351px;
 }
 .backbone {
   left: 433px;
@@ -153,6 +220,73 @@ ul, li {
   position: absolute;
   display: block;
   z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+.panel:before1 {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: -webkit-radial-gradient(circle, #006600, #000);
+  left: 0;
+  top: 50%;
+}
+.panel:after1 {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: -webkit-radial-gradient(circle, #006600, #000);
+  left: 50%;
+  top: 0;
+}
+.panel ul:before,
+.panel ul:after,
+.panel ul li:before,
+.panel ul li:after {
+  /*content: " ";*/
+  height: 20%;
+  width: 20%;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid green;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  margin-left: -10%;
+  margin-top: -10%;
+}
+.panel ul:before {
+  height: 20%;
+  width: 20%;
+  margin-left: -10%;
+  margin-top: -10%;
+  border-color: #005500;
+}
+.panel ul:after {
+  height: 40%;
+  width: 40%;
+  margin-left: -20%;
+  margin-top: -20%;
+  border-color: #004400;
+}
+.panel ul li:nth-child(1):before {
+  height: 60%;
+  width: 60%;
+  margin-left: -30%;
+  margin-top: -30%;
+  border-color: #003300;
+}
+.panel ul li:nth-child(1):after {
+  height: 80%;
+  width: 80%;
+  margin-left: -40%;
+  margin-top: -40%;
+  border-color: #002200;
 }
 .panel a {
     font-family: "FontAwesome";
@@ -174,7 +308,7 @@ ul, li {
     text-align: center;
     line-height: 32px;
 }
-.panel a:active {  
+.panel a:active {
     box-shadow: 0px 0px 0px 0px rgb(34,34,34), /* 1st Shadow */
                 0px 3px 7px 0px rgb(17,17,17), /* 2nd Shadow */
                 inset 0px 1px 1px 0px rgba(250, 250, 250, .2), /* 3rd Shadow */

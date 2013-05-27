@@ -1,3 +1,4 @@
-$('.power').click(function () {
+$('.power').click(function (e) {
+  e.preventDefault();
   $('.radar').toggleClass('pause');
 });
