@@ -1,3 +1,3 @@
-$('#start_pause').click(function () {
+$('.power').click(function () {
   $('.radar').toggleClass('pause');
 });

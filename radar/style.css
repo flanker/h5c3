@@ -1,5 +1,24 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format('eot'),
+       url("fonts/fontawesome-webfont.woff") format('woff'),
+       url("fonts/fontawesome-webfont.ttf") format('truetype'),
+       url("fonts/fontawesome-webfont.svg#FontAwesome") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #DDD;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:active,
+:focus {
+  outline: 0;
 }
 .page {
   position: relative;
@@ -63,8 +82,6 @@ body {
   left: -5px;
   background-color: black;
   background-image: -webkit-radial-gradient(center center, circle closest-side, #003300, black);
-  margin: 0;
-  padding: 0;
   border-radius: 100%;
   clip: rect(0, 510px, 510px, 255px);
   z-index: 20;
@@ -75,10 +92,7 @@ body {
   content: none;
 }
 .object {
-  margin: 0;
-  padding: 0;
   color: green;
-  list-style: none;
   display: block;
   position: absolute;
   width: 5px;
@@ -131,4 +145,40 @@ body {
 .cucumber {
   left: 220px;
   top: 321px;
+}
+
+
+/* panel */
+.panel {
+  position: absolute;
+  display: block;
+  z-index: 50;
+}
+.panel a {
+    font-family: "FontAwesome";
+    color: rgb(37,37,37);
+    text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
+    font-size: 16pt;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(83,87,93);
+    box-shadow: 0px 3px 0px 0px rgb(34,34,34), /* 1st Shadow */
+                0px 7px 10px 0px rgb(17,17,17), /* 1nd Shadow */
+                inset 0px 1px 1px 0px rgba(250, 250, 250, .2), /* 3rd Shadow */
+                inset 0px -12px 35px 0px rgba(0, 0, 0, .5); /* 4th Shadow */
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 32px;
+}
+.panel a:active {  
+    box-shadow: 0px 0px 0px 0px rgb(34,34,34), /* 1st Shadow */
+                0px 3px 7px 0px rgb(17,17,17), /* 2nd Shadow */
+                inset 0px 1px 1px 0px rgba(250, 250, 250, .2), /* 3rd Shadow */
+                inset 0px -10px 35px 5px rgba(0, 0, 0, .5); /* 4th Shadow */
+    background-color: rgb(83,87,93);
+    top: 3px;
 }
