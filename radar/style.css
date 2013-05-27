@@ -20,7 +20,7 @@ ul, li {
 :focus {
   outline: 0;
 }
-.page {
+.cockpit {
   position: relative;
   height: 500px;
   width: 500px;
@@ -87,8 +87,8 @@ ul, li {
   z-index: 20;
   -webkit-animation: scan-cover 10s linear infinite;
 }
-.radar.pause .objects:before,
-.radar.pause .objects:after {
+.cockpit.pause .objects:before,
+.cockpit.pause .objects:after {
   content: none;
 }
 .object {
@@ -223,6 +223,9 @@ ul, li {
   width: 100%;
   height: 100%;
 }
+.panel .power {
+  margin-left: -25px;
+}
 .panel .more {
   display: none;
 }
@@ -269,6 +272,12 @@ ul, li {
 .panel ul li:nth-child(3):before,
 .panel ul li:nth-child(3):after {
   -webkit-animation: scan-cover 10s linear infinite;
+}
+.cockpit.pause .panel ul:before,
+.cockpit.pause .panel ul:after,
+.cockpit.pause .panel ul li:before,
+.cockpit.pause .panel ul li:after {
+  -webkit-animation: none;
 }
 .panel ul:before,
 .panel ul li:nth-child(2):before {
