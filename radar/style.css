@@ -70,6 +70,10 @@ body {
   z-index: 20;
   -webkit-animation: scan-cover 10s linear infinite;
 }
+.radar.pause .objects:before,
+.radar.pause .objects:after {
+  content: none;
+}
 .object {
   margin: 0;
   padding: 0;

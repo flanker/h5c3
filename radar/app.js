@@ -1,3 +1,3 @@
-// $.timer(1000, function (t) {
-//   $('.radar').text(t);
-// });
+$('#start_pause').click(function () {
+  $('.radar').toggleClass('pause');
+});
