@@ -20,6 +20,16 @@ ul, li {
 :focus {
   outline: 0;
 }
+
+.title {
+  position: absolute;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 3px rgba(0,150,0,0.8);
+  font-size: 64px;
+  right: 20px;
+  top: 0;
+}
+
 .cockpit {
   position: relative;
   height: 500px;
