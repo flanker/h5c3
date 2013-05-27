@@ -25,30 +25,15 @@
   50% { -webkit-transform: rotate(350deg); }
   100% { -webkit-transform: rotate(530deg); }
 }
-
 .radar:before {
   content: " ";
   display: block;
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: -webkit-radial-gradient(center center, circle closest-side, green, black);
+  background-image: -webkit-radial-gradient(center center, circle closest-side, green, #002200);
   border-radius: 100%;
-
-}
-.radar:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 102%;
-  width: 102%;
-  top: -5px;
-  left: -5px;
-  background-color: black;
-  border-radius: 100%;
-  clip: rect(0, 510px, 510px, 255px);
-  z-index: 20;
-  -webkit-animation: scan 10s linear infinite;
+  z-index: 5;
 }
 .objects:before {
   content: " ";
@@ -59,6 +44,22 @@
   top: -5px;
   left: -5px;
   background-color: black;
+  background-image: -webkit-radial-gradient(center center, circle closest-side, #003300, black);
+  border-radius: 100%;
+  clip: rect(0, 510px, 510px, 255px);
+  z-index: 20;
+  -webkit-animation: scan 10s linear infinite;
+}
+.objects:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 102%;
+  width: 102%;
+  top: -5px;
+  left: -5px;
+  background-color: black;
+  background-image: -webkit-radial-gradient(center center, circle closest-side, #003300, black);
   margin: 0;
   padding: 0;
   border-radius: 100%;
