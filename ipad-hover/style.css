@@ -1,0 +1,15 @@
+body {
+  font-size: 32px;
+}
+
+.red:hover {
+  color: red;
+}
+
+.more {
+  display: none;
+}
+
+.display:hover .more{
+  display: none;
+}
