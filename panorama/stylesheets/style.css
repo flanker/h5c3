@@ -2,17 +2,15 @@
 
 .panorama {
   margin: 0 auto;
-  padding: 5px;
-  border: 1px solid #ccc;
   cursor: all-scroll;
 
   width: 60%;
-  height: 300px;
+  height: 0;
+  padding-bottom: 30%;
 
   background-image: url(../images/panorama-melbourne-CBD-southbank-yarra-river.jpg);
   background-size: cover;
   background-position-x: 50%;
-  background-clip: content-box;
 
   transition: background-position-x 1s linear;
 }
