@@ -10,7 +10,7 @@
 
   background-image: url(../images/panorama-melbourne-CBD-southbank-yarra-river.jpg);
   background-size: cover;
-  background-position-x: 50%;
+  background-position: 50% 0;
 
   transition: background-position-x 1s linear;
 }

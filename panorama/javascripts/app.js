@@ -11,7 +11,7 @@ $(function () {
     var offset = e.pageX - left;
     var percentage = offset / width * 100;
 
-    $panorama.css('background-position-x', percentage + '%');
+    $panorama.css('background-position', percentage + '% 0');
 
   });
 
