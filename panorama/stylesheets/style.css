@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: 50% 0;
 
-  transition: background-position-x 1s linear;
+  transition: background-position 1s linear;
 }
 
 .description {
